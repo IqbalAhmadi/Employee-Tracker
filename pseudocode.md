@@ -2,7 +2,7 @@
 
 **** Pachakges ******
     * Install npm i (Done)
-    * Run mysql -u root (Not yet - give me error.)
+    * Run mysql -u root (Done)
     * Install npm install console.table --save (Done)
     * Install npm install --save mysql2 (Done)
     * Install npm install inquirer (Done)
@@ -12,6 +12,8 @@
     * schema.sql
     * query.sql
     * seeds.sql
+
+    -- Create server.js file (Done)---
 
     Done 👆 with creating folder & files
 
