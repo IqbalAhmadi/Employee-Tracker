@@ -1,7 +1,7 @@
 const iq = require('inquirer')
 const mySQL = require('mysql2')
 const { exit } = require('process')
-const consoleTable = require('console.table')
+// const consoleTable = require('console.table')
 
 // const express = require('express')
 // const { default: inquirer } = require('inquirer')
