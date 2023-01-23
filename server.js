@@ -1,5 +1,4 @@
-const { default: inquirer } = require('inquirer')
-const iq = require('inquirer')
+const inquirer = require('inquirer')
 const db = require('./connection')
 
 function questions() {
