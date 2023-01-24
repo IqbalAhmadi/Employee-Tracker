@@ -4,7 +4,7 @@ let db = mysql.createConnection({
   user: 'root',
   password: '',
   port: 3306,
-  host: 'localhost',
+  host: '127.0.0.1',
   database: 'employee_db',
 })
 
