@@ -23,17 +23,16 @@ In order to use this application you will need to first run an npm install in yo
 - Git - Version control system to track changes to source code
 - GitHub - Hosts repository that can be deployed to GitHub Pages
 
-```
-
 ## Built With
-* [MySQL](https://www.mysql.com/)
-* [Express.js](https://expressjs.com/)
-* [Node.js](https://nodejs.org/en/)
-* [npmjs](https://docs.npmjs.com/)
-* [inquirer](https://www.npmjs.com/package/inquirer)
+
+- [MySQL](https://www.mysql.com/)
+- [Express.js](https://expressjs.com/)
+- [Node.js](https://nodejs.org/en/)
+- [npmjs](https://docs.npmjs.com/)
+- [inquirer](https://www.npmjs.com/package/inquirer)
 
 ## Authors
 
 **Iqbal Ahmadi**
+
 - [Link to Github](https://github.com/iqbalahmadi)
-```
