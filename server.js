@@ -9,38 +9,38 @@ function questions() {
         type: 'list',
         message: 'EMPLOYEE MANAGER\n What would you like to do?',
         choices: [
-          'view all departments',
-          'view all roles',
-          'view all employees',
-          'add a department',
-          'add a role',
-          'add an employee',
-          'update an employee role',
+          'View all departments',
+          'View all roles',
+          'View all employees',
+          'Add a department',
+          'Add a role',
+          'Add an employee',
+          'Update an employee role',
           'Exit application',
         ],
       },
     ])
     .then(function (response) {
       switch (response.prompt) {
-        case 'view all departments':
+        case 'View all departments':
           viewAllDepartment()
           break
-        case 'view all roles':
+        case 'View all roles':
           viewAllRoles()
           break
-        case 'view all employees':
+        case 'View all employees':
           viewAllEmployees()
           break
-        case 'add a department':
+        case 'Add a department':
           addDepartment()
           break
-        case 'add a role':
+        case 'Add a role':
           addRole()
           break
-        case 'add an employee':
+        case 'Add an employee':
           addEmployee()
           break
-        case 'update an employee role':
+        case 'Update an employee role':
           updateEmpRole()
           break
         case 'Exit application':
@@ -55,12 +55,12 @@ function addDepartment() {
     .prompt([
       {
         type: 'input',
-        name: 'department',
+        name: 'departmentName',
         message: 'What is the name of the new department?',
       },
     ])
     .then((data) => {
-      db.query('Insert  into department set? ', {
+      db.query('Insert into department set?', {
         name: data.departmentName,
       })
       questions()
@@ -78,7 +78,7 @@ function addRole() {
         },
         {
           type: 'input',
-          name: 'title',
+          name: 'salary',
           message: 'What is the salary of the role? ',
         },
         {
@@ -147,6 +147,12 @@ function updateEmpRole() {
             type: 'list',
             name: 'employee',
             message: "Which employee's role do you want to update? ",
+            choices: employees.map(
+              (employee) => `${employee.first_name} ${employee.last_name}`
+            ),
+            type: 'input',
+            name: 'role_id',
+            message: 'What is the new role ID for this employee?',
           },
         ])
         .then((answers) => {
@@ -157,7 +163,7 @@ function updateEmpRole() {
           )
 
           db.query(
-            'UPDATE employee SET role_id = ? WHERE id = ?',
+            'UPDATE employee SET role_id = ? WHERE id= ?',
             [answers.role_id, employee.id],
             (err, res) => {
               if (err) throw err
